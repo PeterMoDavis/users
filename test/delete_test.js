@@ -38,7 +38,7 @@ describe("Deleting a user", () => {
       });
   });
   it("class method find by id and remove", (done) => {
-    User.findByIdAndRemove(joe._id)
+    User.findByIdAndDelete(joe._id)
       .then(() => User.findOne({ name: "Joe" }))
       .then((user) => {
         assert(user === null);
